@@ -1,0 +1,865 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid > div {
+  background-color: #ccc;
+  border: solid 1px #999;
+}
+
+.site {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-rows: 50px 100px auto 50px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 5px;
+  grid-template-areas:
+    "title title title title title title title title"
+    "header nav nav nav nav nav nav nav"
+    "sidebar body body body body body body body"
+    "footer footer footer footer footer footer footer footer";
+}
+
+.title {
+  grid-area: title;
+  border: 2px solid black;
+}
+
+.header {
+  grid-area: header;
+  background-color: #ccc;
+  border: solid 1px #999;
+}
+.nav {
+  grid-area: nav;
+  background-color: #ccc;
+  border: solid 1px #999;
+}
+.footer {
+  grid-area: footer;
+  background-color: #ccc;
+  border: solid 1px #999;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgb(143, 220, 223);
+  border: solid 1px rgb(1, 2, 71);
+}
+
+.body {
+  grid-area: body;
+  grid-column-start: 2;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-gap: 2px;
+  border: solid 1px rgb(3, 71, 1);
+}
+.child {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: #a9eafe;
+  border: solid 1px #999;
+}
+
+.child2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 7;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+  background-image: url(https://cdn.glitch.com/aec7746a-29ea-46cd-9396-2548f18c0097%2Fimg20190507_07143386.jpg?1558024094211);
+  width: 180px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
+}
+
+.child3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child4 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child5 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child6 {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child7 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child8 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child9 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child10 {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child11 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child12 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child13 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child14 {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child15 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child16 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child17 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child18 {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child19 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  background-color: #80d0d0;
+  border: solid 1px #999;
+}
+
+.child20 {
+  grid-column-start: 3;
+  grid-column-end: 8;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  background-color: #bbd2e1;
+  border: solid 1px #999;
+}
+
+.child21 {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background-color: #a9eafe;
+  border: solid 1px #999;
+}
+
+.child22 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  background-color: #de3163;
+  border: solid 1px #999;
+}
+
+.child23 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  background-color: #de3163;
+  border: solid 1px #999;
+}
+
+.child24 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  background-color: #de3163;
+  border: solid 1px #999;
+}
+
+.child25 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  background-color: #de3163;
+  border: solid 1px #999;
+}
+
+.child26 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child27 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child28 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child29 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child30 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 10;
+  grid-row-end: 11;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child31 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 10;
+  grid-row-end: 11;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child32 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 10;
+  grid-row-end: 11;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child33 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 10;
+  grid-row-end: 11;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child34 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child35 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child36 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child37 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child38 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+
+.child39 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+
+.child40 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+.child41 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+
+.child42 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 13;
+  grid-row-end: 14;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child43 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 13;
+  grid-row-end: 14;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child44 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 13;
+  grid-row-end: 14;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child45 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 13;
+  grid-row-end: 14;
+  background-color: #fde9e0;
+  border: solid 1px #999;
+}
+
+.child46 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 14;
+  grid-row-end: 15;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child47 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 14;
+  grid-row-end: 15;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child48 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 14;
+  grid-row-end: 15;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child49 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 14;
+  grid-row-end: 15;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child50 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 15;
+  grid-row-end: 16;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child51 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 15;
+  grid-row-end: 16;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child52 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 15;
+  grid-row-end: 16;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child53 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 15;
+  grid-row-end: 16;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child54 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 16;
+  grid-row-end: 17;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+
+.child55 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 16;
+  grid-row-end: 17;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+
+.child56 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 16;
+  grid-row-end: 17;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+
+.child57 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 16;
+  grid-row-end: 17;
+  background-color: #ff6f7d;
+  border: solid 1px #999;
+}
+
+.child58 {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 17;
+  grid-row-end: 18;
+  background-color: #a9eafe;
+  border: solid 1px #999;
+}
+
+.child59 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 18;
+  grid-row-end: 19;
+  background-color: #de3163;
+  border: solid 1px #999;
+}
+
+.child60 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 18;
+  grid-row-end: 19;
+  background-color: #de3163;
+  border: solid 1px #999;
+}
+
+.child61 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 18;
+  grid-row-end: 19;
+  background-color: #de3163;
+  border: solid 1px #999;
+}
+
+.child62 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 19;
+  grid-row-end: 20;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child63 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 19;
+  grid-row-end: 20;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child64 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 19;
+  grid-row-end: 20;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child65 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 19;
+  grid-row-end: 20;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child66 {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 19;
+  grid-row-end: 20;
+  background-color: #febfd2;
+  border: solid 1px #999;
+}
+
+.child67 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child68 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child69 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child70 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child71 {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  background-color: #fe96a0;
+  border: solid 1px #999;
+}
+
+.child72 {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 21;
+  grid-row-end: 22;
+  background-color: #b0f2b6;
+  border: solid 1px #999;
+}
+
+.child73 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 22;
+  grid-row-end: 23;
+  background-color: #149414;
+  border: solid 1px #999;
+}
+
+.child74 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 22;
+  grid-row-end: 23;
+  background-color: #149414;
+  border: solid 1px #999;
+}
+
+.child75 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 22;
+  grid-row-end: 23;
+  background-color: #149414;
+  border: solid 1px #999;
+}
+
+.child76 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 22;
+  grid-row-end: 23;
+  background-color: #149414;
+  border: solid 1px #999;
+}
+
+.child77 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 23;
+  grid-row-end: 24;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}
+
+.child78 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 23;
+  grid-row-end: 24;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}
+
+.child79 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 23;
+  grid-row-end: 24;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}
+
+.child80 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 23;
+  grid-row-end: 24;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}
+
+.child81 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 24;
+  grid-row-end: 25;
+  background-color: #01d758;
+  border: solid 1px #999;
+}
+
+.child82 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 24;
+  grid-row-end: 25;
+  background-color: #01d758;
+  border: solid 1px #999;
+}
+
+.child83 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 24;
+  grid-row-end: 25;
+  background-color: #01d758;
+  border: solid 1px #999;
+}
+
+.child84 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 24;
+  grid-row-end: 25;
+  background-color: #01d758;
+  border: solid 1px #999;
+}
+
+.child85 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 25;
+  grid-row-end: 26;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}
+
+.child86 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 25;
+  grid-row-end: 26;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}
+
+.child87 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 25;
+  grid-row-end: 26;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}
+
+.child88 {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 25;
+  grid-row-end: 26;
+  background-color: #57d53b;
+  border: solid 1px #999;
+}

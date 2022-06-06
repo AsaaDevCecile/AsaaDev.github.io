@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+dl {
+  width: 15em;
+}
+dt {
+  color: #0f0f0f;
+}
+dd {
+  color: rgb(41, 71, 116);
+}
+content {
+  display: block;
+  flex: 1;
+}
+/* responsive */
+@media (max-width: 640px) {
+  body {
+    min-height: 0;
+  }
+  content {
+    flex-basis: auto;
+  }
+  dl {
+    width: auto;
+    order: 1;
+  }
+}
+/* decoration */
+dl {
+  padding: 10px;
+  margin: 0;
+
+  border-radius: 10px;
+  color: #000;
+}
+dl a {
+  display: block;
+  padding: 0.5em 1em;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}

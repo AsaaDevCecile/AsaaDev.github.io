@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  height: 6em;
+}
+
+footer {
+  height: 10em;
+}
+
+subfooter {
+  height: 2em;
+}
+
+nav {
+  height: 4em;
+}
+
+aside,
+content {
+  height: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .boite {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  header {
+    background-color: blue;
+    width: 100%;
+    order: 1;
+  }
+  nav {
+    background-color: yellow;
+    width: 100%;
+    order: 2;
+  }
+
+  aside {
+    background-color: red;
+    width: 40%;
+    order: 4;
+  }
+  content {
+    background-color: green;
+    width: 60%;
+    order: 3;
+  }
+  footer {
+    background-color: pink;
+    width: 100%;
+    order: 5;
+  }
+  subfooter {
+    background-color: #25fde9;
+    width: 100%;
+    order: 6;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1200px) {
+  .boite {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  header {
+    background-color: blue;
+    width: 100%;
+    order: 1;
+  }
+  nav {
+    background-color: yellow;
+    width: 100%;
+    order: 2;
+  }
+
+  aside {
+    background-color: red;
+    width: 100%;
+    order: 3;
+  }
+  content {
+    background-color: green;
+    width: 100%;
+    order: 4;
+  }
+  footer {
+    background-color: pink;
+    width: 100%;
+    order: 5;
+  }
+  subfooter {
+    background-color: #25fde9;
+    width: 100%;
+    order: 6;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .boite {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  header {
+    background-color: blue;
+    width: 100%;
+    order: 1;
+  }
+  nav {
+    background-color: yellow;
+    width: 100%;
+    order: 2;
+  }
+
+  aside {
+    background-color: red;
+    width: 100%;
+    order: 4;
+  }
+  content {
+    background-color: green;
+    width: 100%;
+    order: 3;
+  }
+  footer {
+    background-color: pink;
+    width: 100%;
+    order: 5;
+  }
+  subfooter {
+    background-color: #25fde9;
+    width: 100%;
+    order: 6;
+  }
+}
